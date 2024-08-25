@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Estacionamento</title>
-    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="style.css">
 </head>
+
+<header id="title">
+    <h1>Controle de Entrada e Saída</h1>
+</header>
+
 <body>
+    <div id="Logo">
+        <img src="./acessets/background.png" alt="background" id="background_img">
+        <p>Estacionamento<br>Central Park</p>
+    </div>
+    <div>
+        <p id="preco_hora">Preco: R$8,00 /Hora</p>
+    </div>
     <div>
         <input type="text" id="name" placeholder="Nome do veículo" autocomplete="off">
         <input type="text" id="licence" placeholder="Placa do veículo" autocomplete="off">
         <button id="send" class="success">Registrar</button>
     </div>
     <table>
-        <thead>
+        <thead id="botao_celulr">
             <tr>
                 <th>Veículo</th>
                 <th>Placa</th>
@@ -27,4 +40,5 @@
 </body>
 
 <script src="main.js"></script>
+
 </html>

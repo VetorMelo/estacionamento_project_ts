@@ -4,24 +4,60 @@
     box-sizing: border-box;
 }
 
+
+#title {
+    text-align: center;
+    font-family: Nunito;
+    text-shadow: rgba(87, 87, 87, 0.725) 5px 4px 10px;
+}
+
+#preco_hora {
+    font-family: Nunito;
+    color: aliceblue;
+}
+
+#Logo {
+    display: flex;
+    align-items: center;
+}
+
+#background_img {
+    margin-right: 10px;
+    filter: drop-shadow(4px 10px 10px rgb(251, 251, 251));
+    height: 200px;
+    width: 300px;
+}
+
+#Logo p {
+    text-align: center;
+    margin: 0;
+    font-family: Nunito;
+    font-size: 40px;
+    color: aliceblue;
+}
+
+/* Estilos gerais para o corpo */
 body {
     width: 50%;
     margin: 2rem auto;
 }
 
+/* Estilos para os divs */
 div {
     display: grid;
     grid-template-columns: 1fr;
-    background-color: #eee;
+    background-color: #174a9e;
     padding: 0.7rem;
 }
 
+/* Estilos para inputs e botões */
 input, button {
     width: 98%;
     padding: 0.6rem 0.4rem;
     margin: 0.4rem;
 }
 
+/* Estilo específico para botões */
 button {
     text-decoration: none;
     border: none;
@@ -30,8 +66,9 @@ button {
     text-align: center;
 }
 
+/* Estilos para classes de sucesso e delete */
 .success {
-    background-color: rgb(54, 80, 231);
+    background-color: rgb(231, 54, 54);
     color: rgb(255, 255, 255);
 }
 
@@ -40,7 +77,7 @@ button {
     color: rgb(255, 255, 255);
 }
 
-
+/* Estilos para tabelas */
 table {
     background-color: #eee;
     margin-top: .9rem;
@@ -48,8 +85,42 @@ table {
     width: 100%;
 }
 
+/* Estilos para células de tabelas */
 th, td {
     padding: 5px 25px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+}
+
+/* Media query para telas menores (celulares) */
+@media (max-width: 768px) {
+    body {
+        width: 90%; /* Ajusta a largura para 90% em telas menores */
+        margin: 1rem auto; /* Reduz a margem */
+    }
+
+    #Logo {
+        flex-direction: column; /* Alinha o logo e o texto em coluna para dispositivos móveis */
+        align-items: center; /* Centraliza o conteúdo */
+        text-align: center; /* Centraliza o texto dentro do container */
+    }
+
+    #background_img {
+        width: 100%; /* Faz a imagem ocupar 100% da largura disponível */
+        height: auto; /* Ajusta a altura automaticamente */
+        margin-bottom: 1rem; /* Adiciona uma margem inferior para separar da próxima linha */
+    }
+
+    #Logo p {
+        font-size: 24px; /* Reduz o tamanho da fonte para telas menores */
+    }
+
+    div {
+        padding: 1rem; /* Aumenta o padding em telas menores para maior espaço */
+    }
+
+    input, button {
+        width: 100%; /* Faz inputs e botões ocuparem 100% da largura disponível */
+        padding: 0.8rem; /* Aumenta o padding para melhorar a usabilidade em telas de toque */
+    }
 }
